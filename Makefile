@@ -12,11 +12,14 @@ INSTALL=~/bin
 #OPTION=-Am -X9 -Et -O0 -Haesux#             # for debug
 
 ##### Intel ifort #####
-FC=ifort
+#FC=ifort
 #OPTION=-assume byterecl -03 -warn all -module src/  #optimized
-OPTION=-assume byterecl -O0 -warn all -heap-arrays -module src/ #no optimized
+#OPTION=-assume byterecl -O0 -warn all -heap-arrays -module src/ #no optimized
 #OPTION=-assume byterecl -C -warn all -module src/ # for debug
 
+##### gfortran
+FC=gfortran
+OPTION=-frecord-marker=4 -O3 -Wall -fbacktrace -g -fcheck=all -fbounds-check
 
 OBJS=
 OBJS_MODULE=
